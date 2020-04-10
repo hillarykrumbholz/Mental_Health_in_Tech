@@ -1,0 +1,6 @@
+git checkout <branch>
+git branch
+git status
+git add .
+git commit -m <commit message>
+git push orgin <branch>

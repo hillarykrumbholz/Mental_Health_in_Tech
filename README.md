@@ -27,7 +27,7 @@ This week's overall goal for the project was to select a topic and data source. 
 ### Data
 
 <strong> Data Source: </strong>OSMI Mental Health in Tech Survey 2016 <br> 
-CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1443 observations (individuals that participated in the survey) with 63 features (questions that were asked).<br> 
+CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1433 observations (individuals that participated in the survey) with 63 features (questions that were asked).<br> 
 <strong> Null Hypothesis: </strong> There is no correlation between a mental health disorder diagnosis and working in tech <br>
 <strong> Alternative Hypothesis: </strong> Based off how one responds to questions on a survey, you are able to predict if one has a diagnosed mental health disorder. <br> 
 <strong> Label: </strong>Have you been diagnosed with a mental health condition by a medical professional? <br>
@@ -40,9 +40,18 @@ CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1443 ob
 
 The project team is planning on using a Random Forest model as they can be run efficiently on large datasets and can handle a large number of input vaiables in a natural way, which is important seeing that our original dataset is a survey that consisted of 63 questions. Random forest algorithms are created by randomly sampling a small portion of data and then creating a decision tree for that portion. This is done many times, creating a "forest" of simple trees that are weak learners, but when combined create a strong learner that is robust against overfitting and outliers, they can also be used to rank the importnace of input variables.<br>
 
+### Data
 
-### Data Cleaning
-#### Initial Step
-The first step we took in cleaning the data set was to remove any columns with a less than 70% response. Pandas was used to loop through the data and 
+#### Data Cleaning
+The initial step is to clean the data, and to transform the categorical data to numerical so that it can be used in a random forest model. 
+- Pandas was used to loop through the data set and functions were printed to look at each column and its response percentage. Any columns with less than a 70% response were dropped from the data set, leaving us with 48 features. 
+- Columns with more than 10 unique responses were added to a list. From that list we dropped any columns with a long response, and kept columns that could be binned, for example the Country where people work, leaving us with 45 columns. 
+- Chi-square tests were ran on each column to determine which columns were significant and should be kept. A p-value of 0.05 was used to determine significance, leaving us with 32 columns. 
+- Since the data set is categorical, we will be using "OneHotEncoder" from the Sklearn library. This will allow us to take the categorical data from each column and subsequently split it into multiple response columns for each response. The categorical data is replaced by 1s and 0s, depending on which column has what value. For example, most of the questions in the survey have either a "yes", "no" or "I don't know" response", meaning that we will get three new columns for each question asked. 
 
-Since we have categorical data for each column, we need to first 
+#### Preprocessing
+The next step is to preprocess the encoded data so that we can fit our training and testing sets. 
+- Define the features and target. 
+
+### Database Storage
+Postgres will be used in conjunction with AWS for database storage. 

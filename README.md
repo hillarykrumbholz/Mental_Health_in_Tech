@@ -21,8 +21,7 @@ This week's overall goal for the project was to select a topic and data source. 
 
 <strong> Questions we Hope to Answer: </strong> 
 1. Based off how idividuals answer the survey, are you able to predict whether or not they have a diagnosed mental health disorder?
-2. Are there specific aspects of a tech company that correlate to the presence of mental health disorders?
-3. <br><br>
+2. Are there specific aspects of a tech company that correlate to the presence of mental health disorders? <br><br>
 
 ### Data
 
@@ -55,3 +54,5 @@ The next step is to preprocess the encoded data so that we can fit our training 
 
 ### Database Storage
 Postgres will be used in conjunction with AWS for database storage. 
+
+### Dashboard

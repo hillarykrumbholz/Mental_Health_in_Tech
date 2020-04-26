@@ -1,7 +1,9 @@
 # Final_Project
 
+Link to presentation can be found [Here](https://docs.google.com/presentation/d/e/2PACX-1vQ9e59BSZeiK2LWKrIjWPhR_mGaKAb4BfJNviVGeLLih-dGfGRYO86zevzhnSuK90FRGu8NI8DQ-XHF/pub?start=false&loop=false&delayms=3000)
+
 ## Segment 2: <br>
-By the end of this segment, many different pieces of the project will be underway - the analysis, work on the machine learning model, and the database will be transitioned into an operational, data-holding tool
+By the end of this segment, many different pieces of the project will be underway - the analysis, work on the machine learning model, and the database will be transitioned into an operational, data-holding tool.
 
 ### Team
 
@@ -69,7 +71,7 @@ Define the features and target
 The project team is planning on using a Random Forest model as they can be run efficiently on large datasets and can handle a large number of input vaiables in a natural way, which is important seeing that our original dataset is a survey that consisted of 63 questions. Random forest algorithms are created by randomly sampling a small portion of data and then creating a decision tree for that portion. This is done many times, creating a "forest" of simple trees that are weak learners, but when combined create a strong learner that is robust against overfitting and outliers, they can also be used to rank the importnace of input variables.<br>
  
 #### Analysis
-![Confusion Matrix]()
+![Confusion Matrix](https://github.com/hillarykrumbholz/Final_Project/blob/master/Segment_Two/Images/Confusion_matrix.png)
 
 ### Dashboard
 

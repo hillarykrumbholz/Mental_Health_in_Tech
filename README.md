@@ -1,7 +1,7 @@
 # Final Project - Mental Health in  Tech Workplace
 
 
-![Mental Health in Tech](https://github.com/hillarykrumbholz/Final_Project/blob/master/Presentation_GIFs/GIFMaker.org_duFod4.gif)
+![Mental Health in Tech](https://github.com/hillarykrumbholz/Final_Project/blob/master/Presentation_GIFs/Webp.net-gifmaker.gif)
 
 Link to presentation can be found [Here](https://docs.google.com/presentation/d/e/2PACX-1vQ9e59BSZeiK2LWKrIjWPhR_mGaKAb4BfJNviVGeLLih-dGfGRYO86zevzhnSuK90FRGu8NI8DQ-XHF/pub?start=false&loop=false&delayms=3000)
 

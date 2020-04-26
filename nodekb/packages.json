@@ -1,0 +1,16 @@
+{
+    "name": "nodekb",
+    "version": "1.0.0",
+    "description": "Simple Knowledge base app",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app"
+    },
+    "author": "Rudyr",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.17.1"
+    },
+    "devDependencies": {}
+  }
+  

@@ -81,7 +81,7 @@ The next step is to preprocess  encoded data so that we can fit our training and
 Define  features and target
 - Target: Have you been diagnosed with a mental health disorder - Yes
 - Features: Have you been diagnosed with a mental health disorder - No; Have you been diagnosed with a mental health disorder - Yes <br>
-- Split into training and testing sets
+- Split into  training and testing sets
 
  
 #### Analysis

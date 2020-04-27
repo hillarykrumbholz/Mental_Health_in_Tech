@@ -50,12 +50,16 @@ CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1433 ob
 The initial step is to clean  data, . 
 - Our data was downloaded from Kaggle.com as a csv file . 
 - Pandas was used to loop through the data set and functions were printed to look at each column and its response percentage. Any columns with less than a 70% response were dropped from  data set, leaving us with 48 features. 
-- Columns with more than 10 unique responses were added to a list. From that list we dropped any columns with a long response, such as "Why or why not" questions.  and kept columns that could be binned, for example  Country where people work, leaving us with 45 columns. 
+- Columns with more than 10 unique responses were added to a list. From that list we dropped any columns with a long response, such as "Why or why not" questions. 
+- The gender column had a large amount of unique values due to some responses meaning the same thing, however python was not able to recognize that. So we cleaned the data by making certain values equal to one another; for example "Male" = "male" = "M". This allowed us to then bin gender into 3 values: "Male", "Female", and "Other".  
+- Columns such as Countries where people live and work could be binned. We first looked at the number of unique values for each response and found that most participants in the survey were either from and/or worked in the United States or United Kingdom. We chose to bin these columns into "United States", "United Kingdom", and "Other", leaving us with 45 columns. 
 - Chi-square tests were ran on each column to determine which columns were significant and should be kept. A p-value of 0.05 was used to determine significance, leaving us with 32 columns. 
 
 ## Database
 
 A SQLite database is used to store our data tables and will interact with our machine learning model. 
+
+![ERD schema](https://github.com/hillarykrumbholz/Final_Project/blob/master/Segment_Two/Images/ERD_schema.png)
  
 
 ## Machine Learning Model - Random Forest
@@ -67,7 +71,23 @@ Random forest models are classifier algorithms that evolve from many individual 
 The random forest model generally has a high accuracy compared to other models and was chosen for the many additional features that it offers. It is robust against overfitting as all the weak learners are trained on different pieces of the data. They are also robust to outliers because each decision tree isolates atypical observations into small leaves and averages them, meaning that extreme values do not affect the entire model. Additionally, random forests run efficiently on large datasets and can handle thousands of input variables without variable deletion. Considering that our original dataset consisted of 63 survey questions (columns) from 1433 participants (rows), it was important to use a model that could make an accurate prediction with so many variables at play. Another benefit of using random forest is that it can be used to rank the importance of input variables in a natural way, allowing us a better understanding of what survey questions are most important when predicting if an individual has a mental health disorder. <br>
 
 #### Preprocessing the Data
-- Since  data set is categorical, we will be using "OneHotEncoder" from  Sklearn library. This will allow us to take  categorical data from each column and subsequently split it into multiple response columns for each response. The categorical data is replaced by 1s and 0s, depending on which column has what value. For example, most of  questions in  survey have either a "yes", "no" or "I don't know" response", meaning that we will get three new columns for each question asked. 
+OneHotEncoder
+- Since  data set is categorical, we will be using "OneHotEncoder" from  Sklearn library. This will allow us to take categorical data from each column and subsequently split it into multiple response columns for each response. The categorical data is replaced by 1s and 0s, depending on which column has what value. For example, most of  questions in  survey have either a "yes", "no" or "I don't know" response", meaning that we will get three new columns for each question asked. 
+Fit and Transform
+- Scikit-learn's encoder fit_transform() method was used to first train the label, then to convert all categorical text data into numerical data. Since all of our data was now binary (either 1's or 0's), we did not need to scale. 
+Get_Feature_Names
+- In order to run our model solely on binary data, we used get_feature_names() method so that the new encoded dataframe could be more easily interpreted and then merged the OneHotEncoded features. 
+Define target and features
+- Target: Have you been diagnosed with a mental health disorder - Yes
+- Features: Have you been diagnosed with a mental health disorder - No; Have you been diagnosed with a mental health disorder - Yes 
+Split into  training and testing sets
+- To train and validate the model, we split the features and target sets into training and testing sets. This helps determine the relationships between each feature in the features training set and the target training set. 
+Create a random forest model
+- Using the RandomForestClassifier, we used the parameters random_state and n_estimators, which allow us to set the number of trees that will be created by the algorithm. The higher the number of trees create stronger and more stable predictions, but can slow down the model.
+Making predictions and evaluating the model
+- After we ran code to make predictions, we analyzed how well our model worked by using the confusion_matrix 
+
+## Analysis
 
 #### What is the model's accuracy?
 ![Confusion Matrix](https://github.com/hillarykrumbholz/Final_Project/blob/master/Segment_Two/Images/Confusion_matrix.png) <br>
@@ -78,23 +98,6 @@ Although for this question, it is also important to look at the precision, which
 
 #### What statistics are involved and why?
 Bootstrapping is a test that relies on random sampling with replacement and in random forests is used on the individual trees where some samples are used multiple times. The idea being that if each tree is trained on different samples, the entire forest will have a lower variance without increasing the bias. <br>
-
-#### Preprocessing
  
- OneHotEncoder
-- Encode categorical features to numerical values using OneHotEncoder. This creates a binary column for each category and returns a sparse matrix or dense array. 
-- We are then able to fit and transform  OneHotEncoder using  categorical variable list.
-The next step is to preprocess  encoded data so that we can fit our training and testing sets.
-- Then merge one-hot encoded features and drop  originals. <br>
-
-Define  features and target
-- Target: Have you been diagnosed with a mental health disorder - Yes
-- Features: Have you been diagnosed with a mental health disorder - No; Have you been diagnosed with a mental health disorder - Yes <br>
-- Split into  training and testing sets
-
- 
-## Analysis
-
-
 ## Dashboard
 

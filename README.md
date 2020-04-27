@@ -47,9 +47,9 @@ CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1433 ob
 ## Data
 
 #### Data Cleaning
-The initial step is to clean  data, . 
-- Our data was downloaded from Kaggle.com as a csv file . 
-- Pandas was used to loop through the data set and functions were printed to look at each column and its response percentage. Any columns with less than a 70% response were dropped from  data set, leaving us with 48 features. 
+The initial step is to clean the data by removing null values. 
+- Our data was downloaded from Kaggle.com as a csv file. 
+- Pandas was used to loop through the data set and functions were printed to look at each column and its response percentage. Any columns with less than a 70% response were dropped from data set, leaving us with 48 features. 
 - Columns with more than 10 unique responses were added to a list. From that list we dropped any columns with a long response, such as "Why or why not" questions. 
 - The gender column had a large amount of unique values due to some responses meaning the same thing, however python was not able to recognize that. So we cleaned the data by making certain values equal to one another; for example "Male" = "male" = "M". This allowed us to then bin gender into 3 values: "Male", "Female", and "Other".  
 - Columns such as Countries where people live and work could be binned. We first looked at the number of unique values for each response and found that most participants in the survey were either from and/or worked in the United States or United Kingdom. We chose to bin these columns into "United States", "United Kingdom", and "Other", leaving us with 45 columns. 
@@ -103,3 +103,11 @@ Bootstrapping is a test that relies on random sampling with replacement and in r
  
 ## Dashboard
 
+#### Tools
+- Tableau
+- - Use of different types of graphs (bar, pie, line) whatever best depicts what point is being made.
+- - Map with added layers
+
+- Interactive Elements
+- - A map that shows states/countries where people in tech work and what mental health disorders are associated
+- - An interactive mock survey where users can input certain variables to see that has the greatest effect on one's mental health

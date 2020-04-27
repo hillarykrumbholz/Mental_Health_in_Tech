@@ -56,8 +56,13 @@ The initial step is to clean  data, .
 - Chi-square tests were ran on each column to determine which columns were significant and should be kept. A p-value of 0.05 was used to determine significance, leaving us with 32 columns. 
 
 ## Database
+We used pandas and SQLAlchemy to put the csv files that we started with into a SQLite database and will use this to interact with our machine learning model.  We also used pandas and SQLAlchemy to merge the tables in our Database.  We choose to use SQLite because it has several characteristics that we were looking for which are listed below.
+- Reading and writing operations are very fast for SQLite database.
+- SQLite is very easy to learn, additionally you dont need to install and configure it.
+- It is availible through a wide variety of tools.
+- The main limitation of is that that the Database size is limited to 2 GB which is not an issue for us.
 
-A SQLite database is used to store our data tables and will interact with our machine learning model. 
+
 
 ![ERD schema](https://github.com/hillarykrumbholz/Final_Project/blob/master/Segment_Two/Images/ERD_schema.png)
  

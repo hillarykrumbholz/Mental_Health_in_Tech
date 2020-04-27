@@ -53,6 +53,8 @@ The initial step is to clean  data, and to transform  categorical data to numeri
 - Since  data set is categorical, we will be using "OneHotEncoder" from  Sklearn library. This will allow us to take  categorical data from each column and subsequently split it into multiple response columns for each response. The categorical data is replaced by 1s and 0s, depending on which column has what value. For example, most of  questions in  survey have either a "yes", "no" or "I don't know" response", meaning that we will get three new columns for each question asked. 
 
 ### Database Storage
+
+We used a SQLite database to hold our data tables that will interact with our machine learning model. 
  
 
 ### Machine Learning Model - Random Forest
@@ -66,8 +68,12 @@ The random forest model generally has a high accuracy compared to other models a
 #### What is the model's accuracy?
 ![Confusion Matrix](https://github.com/hillarykrumbholz/Final_Project/blob/master/Segment_Two/Images/Confusion_matrix.png) <br>
 
-#### What statistics are involved and why?
+Our model’s accuracy score is 86.11, meaning that it accurately predicts if an individual has a mental health disorder 86.11% of the time, based off how they answer survey questions (assuming they answer honestly). Since this model is not making a prediction that has high consequences, it is merely for the interest of an individual working in tech and wanting to know their likelihood of having (or developing) a mental health disorder, or for the interest of a tech company and wanting to know if offering certain mental health services would be of benefit to their employees, an accuracy of 86.11% is sufficient.<br>
 
+Although for this question, it is also important to look at the precision, which is the measure of how reliable a positive classification is. The precision for classifying a true positive and true negative is 90% and 83%, respectively. This means that if a survey participant is predicted to have a mental health disorder based off their answers to questions (true positive), it is 90% likely that it is true. Likewise, if a participant is predicted to not have a mental health disorder (true negative), it is 83% likely that it is true.
+
+#### What statistics are involved and why?
+Bootstrapping is a test that relies on random sampling with replacement and in random forests is used on the individual trees where some samples are used multiple times. The idea being that if each tree is trained on different samples, the entire forest will have a lower variance without increasing the bias. <br>
 
 #### Preprocessing
  

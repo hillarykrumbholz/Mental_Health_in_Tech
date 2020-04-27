@@ -53,22 +53,27 @@ The initial step is to clean  data, and to transform  categorical data to numeri
 - Since  data set is categorical, we will be using "OneHotEncoder" from  Sklearn library. This will allow us to take  categorical data from each column and subsequently split it into multiple response columns for each response. The categorical data is replaced by 1s and 0s, depending on which column has what value. For example, most of  questions in  survey have either a "yes", "no" or "I don't know" response", meaning that we will get three new columns for each question asked. 
 
 ### Database Storage
+
+We used a SQLite database to hold our data tables that will interact with our machine learning model. 
  
 
 ### Machine Learning Model - Random Forest
 
 #### How does a random forest model work?
-Random forest models are classifier algorithms that evolve from many decision trees. Each individual decision tree provides a classification for input data, which is a sample taken from the original dataset. This is done many times, creating a "forest" of simple tree classifiers. Each of these trees, when on their own are "weak" learners, but when combined create a "strong" learner that is capable of making an accurate prediction by choosing the most voted prediction as the result. <br>
+Random forest models are classifier algorithms that evolve from many individual decision trees. Each tree learns from a random sample taken from the original dataset; this is done many times, creating a forest of simple tree classifiers that have been trained on a slightly different set of observations. Each of these trees, when on their own are “weak” learners, but when combined create a “strong” learner because the final predictions of random forest are made by averaging the predictions of each individual tree and choosing the most voted prediction. <br>
 
 #### Why this model?
-robust against overfitting and outliers, they can also be used to rank importnace of input variables.
-Random forest models can be run efficiently on large datasets and can handle a large number of input vaiables in a natural way. Seeing that our original dataset is a survey that consisted of 63 questions from 1433 participants, it was important to choose a model that could make an accuarte prediction when there are so many variables at play. <br>
+The random forest model generally has a high accuracy compared to other models and was chosen for the many additional features that it offers. It is robust against overfitting as all the weak learners are trained on different pieces of the data. They are also robust to outliers because each decision tree isolates atypical observations into small leaves and averages them, meaning that extreme values do not affect the entire model. Additionally, random forests run efficiently on large datasets and can handle thousands of input variables without variable deletion. Considering that our original dataset consisted of 63 survey questions (columns) from 1433 participants (rows), it was important to use a model that could make an accurate prediction with so many variables at play. Another benefit of using random forest is that it can be used to rank the importance of input variables in a natural way, allowing us a better understanding of what survey questions are most important when predicting if an individual has a mental health disorder. <br>
 
 #### What is the model's accuracy?
 ![Confusion Matrix](https://github.com/hillarykrumbholz/Final_Project/blob/master/Segment_Two/Images/Confusion_matrix.png) <br>
 
-#### What statistics are involved and why?
+Our model’s accuracy score is 86.11, meaning that it accurately predicts if an individual has a mental health disorder 86.11% of the time, based off how they answer survey questions (assuming they answer honestly). Since this model is not making a prediction that has high consequences, it is merely for the interest of an individual working in tech and wanting to know their likelihood of having (or developing) a mental health disorder, or for the interest of a tech company and wanting to know if offering certain mental health services would be of benefit to their employees, an accuracy of 86.11% is sufficient.<br>
 
+Although for this question, it is also important to look at the precision, which is the measure of how reliable a positive classification is. The precision for classifying a true positive and true negative is 90% and 83%, respectively. This means that if a survey participant is predicted to have a mental health disorder based off their answers to questions (true positive), it is 90% likely that it is true. Likewise, if a participant is predicted to not have a mental health disorder (true negative), it is 83% likely that it is true.
+
+#### What statistics are involved and why?
+Bootstrapping is a test that relies on random sampling with replacement and in random forests is used on the individual trees where some samples are used multiple times. The idea being that if each tree is trained on different samples, the entire forest will have a lower variance without increasing the bias. <br>
 
 #### Preprocessing
  

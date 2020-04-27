@@ -80,15 +80,20 @@ There are limitations when working with a random forest model
 #### Preprocessing the Data
 OneHotEncoder
 - Since  data set is categorical, we will be using "OneHotEncoder" from  Sklearn library. This will allow us to take categorical data from each column and subsequently split it into multiple response columns for each response. The categorical data is replaced by 1s and 0s, depending on which column has what value. For example, most of  questions in  survey have either a "yes", "no" or "I don't know" response", meaning that we will get three new columns for each question asked. <br>
+
 Fit and Transform
 - Scikit-learn's encoder fit_transform() method was used to first train the label, then to convert all categorical text data into numerical data. Since all of our data was now binary (either 1's or 0's), we did not need to scale. <br>
+
 Get_Feature_Names
 - In order to run our model solely on binary data, we used get_feature_names() method so that the new encoded dataframe could be more easily interpreted and then merged the OneHotEncoded features.<br> 
+
 Define target and features
 - Target: Have you been diagnosed with a mental health disorder - Yes
 - Features: Have you been diagnosed with a mental health disorder - No; Have you been diagnosed with a mental health disorder - Yes <br>
+
 Split into  training and testing sets
 - To train and validate the model, we split the features and target sets into training and testing sets. This helps determine the relationships between each feature in the features training set and the target training set. <br>
+
 Create a random forest model 
 - Using the RandomForestClassifier, we used the parameters random_state and n_estimators, which allow us to set the number of trees that will be created by the algorithm. The higher the number of trees create stronger and more stable predictions, but can slow down the model.
 Making predictions and evaluating the model
@@ -110,9 +115,9 @@ Bootstrapping is a test that relies on random sampling with replacement and in r
 
 #### Tools
 - Tableau
-- - Use of different types of graphs (bar, pie, line) whatever best depicts what point is being made.
-- - Map with added layers
+    - Use of different types of graphs (bar, pie, line) whatever best depicts what point is being made.
+    - Map with added layers
 
 - Interactive Elements
-- - A map that shows states/countries where people in tech work and what mental health disorders are associated
-- - An interactive mock survey where users can input certain variables to see that has the greatest effect on one's mental health
+    - A map that shows states/countries where people in tech work and what mental health disorders are associated
+    - An interactive mock survey where users can input certain variables to see that has the greatest effect on one's mental health

@@ -4,7 +4,6 @@ git status
 git add .
 git commit -m <commit message>
 git push orgin <branch>
-
 Create a pull request on github
 Get team member to approve pull request
 

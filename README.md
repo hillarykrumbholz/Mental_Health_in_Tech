@@ -6,31 +6,32 @@
 Link to presentation can be found [Here](https://docs.google.com/presentation/d/e/2PACX-1vQ9e59BSZeiK2LWKrIjWPhR_mGaKAb4BfJNviVGeLLih-dGfGRYO86zevzhnSuK90FRGu8NI8DQ-XHF/pub?start=false&loop=false&delayms=3000)
 
 
+## Segment 3 Expectations: <br>
+By the end of this deliverable the analysis will be complete in addition to any refinements made to the random forest model and SQLite database. Images depicting the data exploration process and results from the analysis will be integrated into the Google slide presentation. Repository should be cleared of excess/unnecessary files and all pull requests should be either merged or deleted. <br>
+
+The larger responsibility of creating the dashboard with interactive elements and perfecting the presentation on Google slides will be shared between all group members. <br>
+
 ## Team
 
-<strong>Square: </strong> To focus on  machine learning model. Primary: Hillary<br>
-<strong>Circle: </strong> Responsible for creating  database. Primary: Rudy<br>
-<strong>Triangle: </strong> Responsible for creating a simple machine learning model. Primary: Jason<br>
+<strong>Square: </strong> Complete peer reviews on the code. Primary: Hillary<br>
+<strong>Circle: </strong> Create a dashboard to display findings. Primary: Rudy<br>
+<strong>Triangle: </strong> Create a draft presentation to share with the class. Primary: Jason<br>
 
-#### Communication Protocols
-- Message communication via Slack
-- Virtual meetings via Zoom Tuesday, Thursday, and Sunday. Additional meeting to be scheduled as needed. 
+All team members will spread the responsibility of working on the dashboard and preparing for the presentation. 
 
-## Segment 2: <br>
-By  end of this segment, many different pieces of  project will be underway -  analysis, work on  machine learning model, and  database will be transitioned into an operational, data-holding tool.
 
 ## Project Overview
 
 <strong> Slected Topic: </strong> Presence of Mental Health Disorders in  Tech Workforce <br>
 
 <strong> Reason for Choosing this Topic: </strong>
-Careers in tech/IT are becoming more prominent. With many of us moving towards a career in tech or changing jobs, it’s of interest to look at  presence of mental health disorders in tech/IT, and possible mental health services provided by employers. 
+Careers in tech/IT are becoming more prominent and with many of us moving towards a career in tech or changing jobs, it’s of interest to look at the presence of mental health disorders in the tech/IT workplace. It's also interesting to consider how a company responds to their employees mental health and services that they may offer. 
 <br>
 
 <strong> Questions we Hope to Answer: </strong> 
 1. Based on how participants answered survey questions, are we able to predict whether or not an individual has a diagnosed mental health disorder?
-2. Does  presence of mental health services offered by a company have an effect on an individual’s mental health?
-3. Do mental health disorders in  tech workplace vary by age, gender, or country they live and work in? <br><br>
+2. Does the presence of mental health services offered by a company have an effect on an individual’s mental health?
+3. Do mental health disorders in the  tech workplace vary by age, gender, or country they live and work in? <br><br>
 
 ## Resources
 
@@ -44,7 +45,7 @@ CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1433 ob
 <strong>Software:</strong> Jupyter Notebook, Python 3.7.6<br>
 <strong>Python libraries:</strong> Pandas, Numpy, Scipy, Scikit-learn, SQLAlchemy, Pickle, Node.js
 
-## Data
+## Project Description
 
 #### Data Cleaning
 The initial step is to clean the data by removing null values. 
@@ -55,13 +56,12 @@ The initial step is to clean the data by removing null values.
 - Columns such as Countries where people live and work could be binned. We first looked at the number of unique values for each response and found that most participants in the survey were either from and/or worked in the United States or United Kingdom. We chose to bin these columns into "United States", "United Kingdom", and "Other", leaving us with 45 columns. 
 - Chi-square tests were ran on each column to determine which columns were significant and should be kept. A p-value of 0.05 was used to determine significance, leaving us with 32 columns. 
 
-## Database
-We used pandas and SQLAlchemy to put the csv files that we started with into a SQLite database and will use this to interact with our machine learning model.  We also used pandas and SQLAlchemy to merge the tables in our Database.  We choose to use SQLite because it has several characteristics that we were looking for which are listed below.
-- Reading and writing operations are very fast for SQLite database.
-- SQLite is very easy to learn, additionally you dont need to install and configure it.
+## Database Integration
+We used pandas and SQLAlchemy to put the csv files that we started with, and merged tables that we created into a SQLite database. Our database is then able to interact with our machnie learning model, which allows us to make predictions and analyze our results. We choose to use SQLite because it has several characteristics that we were looking for which are listed below:
+- Reading and writing operations are fast for SQLite databases.
+- SQLite is very easy to learn, additionally there is no added installation and configuration.
 - It is availible through a wide variety of tools.
-- The main limitation of is that that the Database size is limited to 2 GB which is not an issue for us.
-
+- The main limitation is that that the Database size is limited to 2 GB, which was not an issue for us.
 
 
 ![ERD schema](https://github.com/hillarykrumbholz/Final_Project/blob/master/Segment_Two/Images/ERD_schema.png)

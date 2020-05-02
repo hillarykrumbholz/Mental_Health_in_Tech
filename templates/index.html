@@ -3,19 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Doc</title>
     <link 
         rel="stylesheet" 
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
 </head>
-<body>
+<body class="bg-dark", onload="initViz();">
     <div class="container">
         <div class="jumbotron text-center">
-            <h1>Mental Health in the Tech Workplace 2.0</h1>
+            <h1>Mental Health in the Tech Workplace</h1>
         </div>
     </div>
    <h1>Hello flask</h1> 
+   <div class="col-md-4">
+       <div class="card card-chart">
+           <div class="card-header card-header-success">
+               <div id="tabMonthlySales"></div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Monthly Sales</h4>
+                <p class="card-category">Across all categories</p>
+            </div>
+            <div class="card-footer">
+                <div class="stats">
+                    <i class="material-icons">access_time</i> campaign sent 2 days ago
+                </div>
+            </div>
+        </div>
+    </div>
    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+   <!-- Tableau Javascript API -->
+   <script src="https://mental-health-ucb.herokuapp.com/javascripts/api/tableau-2.min.js"></script>
+   <!--   Tableau embed scripts   -->
+   <script src="static/js/index.js"></script>
 </body>
 </html>

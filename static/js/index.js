@@ -10,4 +10,4 @@ function initViz() {
         height: "200px",
     };
     var viz = new tableau.Viz(containerDiv, url, options);
-  }
+ }

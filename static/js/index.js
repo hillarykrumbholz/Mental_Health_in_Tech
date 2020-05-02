@@ -2,11 +2,12 @@ console.log("Waddup")
 
 //Tableau Embed function
 function initViz() {
-    url = "https://public.tableau.com/profile/rudy7195#!/vizhome/FP_COO/Sheet1",
+    var containerDiv = document.getElementById("vizContainer"),
+    url = "https://public.tableau.com/shared/R8J4BWX5W?:display_count=y&:origin=viz_share_link",
     options = {
         hideToolbar: true,
-        width: "100%",
+        width: "50%",
         height: "200px",
     };
-    viz = new tableau.Viz(tabMonthlySales, url, options);
+    var viz = new tableau.Viz(containerDiv, url, options);
   }

@@ -11,3 +11,8 @@ function initViz() {
     };
     var viz = new tableau.Viz(containerDiv, url, options);
   }
+
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}

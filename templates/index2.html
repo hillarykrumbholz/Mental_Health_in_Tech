@@ -9,11 +9,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 550px}
+    .row.content {height: 220px}
     
     /* Set gray background color and 100% height */
     .sidenav {
-      background-color: #f1f1f1;
+      background-color: #f1eaea;
       height: 100%;
     }
         
@@ -21,6 +21,17 @@
     @media screen and (max-width: 767px) {
       .row.content {height: auto;} 
     }
+  body {
+  padding: 10px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  }
+
+  .dark-mode {
+  background-color: black;
+  color: black;
+  }
   </style>
 </head>
 <body>
@@ -55,16 +66,32 @@
     </div>
     <br>
     
-    <div class="col-sm-11">
+    <div class="col-sm-8">
       <div class="jumbotron text-center">
         <h1>Mental Health in Tech</h1>
         <p>Reason for choosing this topic and some additional information</p>
       </div>
+    </div>
+      <div class="col-sm-3">
+        <div class="well">
+          <h4>Toggle Dark/Light Mode</h4>
+          <p>Click the button to toggle between dark and light mode for this page.</p>
+
+          <button onclick="myFunction()">Toggle dark mode</button>
+
+          <script>
+          function myFunction() {
+          var element = document.body;
+          element.classList.toggle("dark-mode");
+          }
+          </script>
+        </div>
+      </div>
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="well">
-            <!-- <h4>Map of Tech Workers</h4> -->
-            <div class='tableauPlaceholder' id='viz1588439035170' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;FP&#47;FP_COO&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FP_COO&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;FP&#47;FP_COO&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1588439035170');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> --> 
+            <h4>Map of Tech Workers</h4>
+            <div class='tableauPlaceholder' id='viz1588473440028' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XW&#47;XWJF743HB&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;XWJF743HB' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XW&#47;XWJF743HB&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1588473440028');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
                 <script src="{{url_for('static', filename='js/index.js')}}"></script>
                 <!-- Tableau Javascript API -->
                 <script src="https://mental-health-ucb.herokuapp.com/javascripts/api/tableau-2.min.js"></script>
@@ -72,18 +99,18 @@
                 <script src="static/js/index.js"></script>
           </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <div class="well">
-            <h4>Interactive Pie Chart w/Dropdown</h4>
-            <p>Options on  the Dropdown will because questions on employer mental health support</p> 
+            <h4>Types of Mental Health Disorders</h4>
+            <div class='tableauPlaceholder' id='viz1588470120163' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MentalHealthinTech-Types&#47;TypesofMHD&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MentalHealthinTech-Types&#47;TypesofMHD' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MentalHealthinTech-Types&#47;TypesofMHD&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1588470120163');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-8">
           <div class="well">
-            <h4>Bubble Plot</h4>
-            <p>Displaying types of mental health disorders</p> 
+            <h4>Interactive Pie Chart w/Dropdown</h4>
+            <p>Options on  the Dropdown will because questions on employer mental health support</p>
           </div>
         </div>
         <div class="col-sm-4">
@@ -92,13 +119,22 @@
               <img src="C:\Users\rnrai\Desktop\UCB_Data_Analysis\Final_Project\Segment_Two\Images\Confusion_matrix.png">
           </div>
         </div>
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-2">
           <div class="well">
-            <h4>Tree Chart</h4>
-            <p>Things</p>  
+            <h2>Toggle Dark/Light Mode</h2>
+            <p>Click the button to toggle between dark and light mode for this page.</p>
+
+            <button onclick="myFunction()">Toggle dark mode</button>
+
+            <script>
+            function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            }
+            </script>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

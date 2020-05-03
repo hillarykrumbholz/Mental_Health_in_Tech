@@ -1,4 +1,4 @@
-console.log("Waddup")
+console.log("Hey")
 
 //Tableau Embed function
 function initViz() {
@@ -10,4 +10,9 @@ function initViz() {
         height: "200px",
     };
     var viz = new tableau.Viz(containerDiv, url, options);
- }
+  }
+
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}

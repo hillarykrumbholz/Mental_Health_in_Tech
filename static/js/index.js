@@ -1,4 +1,4 @@
-console.log("Waddup")
+console.log("Hey")
 
 //Tableau Embed function
 function initViz() {

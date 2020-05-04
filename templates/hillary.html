@@ -35,6 +35,7 @@
 <body>
     <div class="container">
         <ul class="nav justify-content-end">
+
             <li class="nav-item">
                 <div class="btn btn-sm btn-dark dark-mode-button">Dark Mode</div>
             </li>
@@ -42,6 +43,9 @@
         <div class="jumbotron text-center">
             <h1 class="display-3">Mental Health in Tech</h1>
             <p class="lead">Reason for choosing this topic and some additional information</p>
+            <a href="https://github.com/hillarykrumbholz/Final_Project" style="font-size: large;">Github - Project
+                Home</a>
+
             <hr class="my-4">
             <div class="dropdown">
                 <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -99,8 +103,28 @@
                 type='text/javascript'>                    var divElement = document.getElementById('viz1588530456431'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </div>
         <div class="card d-none" style="margin-top: 10px;">
-            <div class="card-body vis">Demographic Information of Participants</div>
-            <div class='tableauPlaceholder' id='viz1588547775554' style='position: relative'><noscript><a href='#'><img
+            <div class="card-body vis">Table of Questions</div>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Question</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="card d-none" style="margin-top: 10px;">
+            <img class="card-img-top"
+                src="https://raw.githubusercontent.com/RudyR32/Confusion_Matrix_Mental_Health_in_Tech/master/Confusion_matrix.jpg"
+                alt="Card image cap">
+            <div class="card-body d-none vis">Confusion Matrix</div>
+        </div>
+        <div class="card d-none" style="margin-top: 10px;">
+            <div class="card-body vis">Summary of Data</div>
+            <div class='tableauPlaceholder' id='viz1588548951565' style='position: relative'><noscript><a href='#'><img
                             alt=' '
                             src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;MH&#47;MHDAge&#47;Dashboard4&#47;1_rss.png'
                             style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
@@ -119,16 +143,10 @@
                     <param name='display_count' value='yes' />
                     <param name='filter' value='publish=yes' /></object></div>
             <script
-                type='text/javascript'>                    var divElement = document.getElementById('viz1588547775554'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-        </div>
-        <div class="card d-none" style="margin-top: 10px;">
-            <div class="card-body vis">Confusion Matrix</div>
-            <img src="C:\Users\rnrai\Desktop\UCB_Data_Analysis\Final_Project\Segment_Two\Images\Confusion_matrix.png">
-        </div>
-        <div class="card d-none" style="margin-top: 10px;">
-            <div class="card-body vis">Card6</div>
+                type='text/javascript'>                    var divElement = document.getElementById('viz1588548951565'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </div>
     </div>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -139,9 +157,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <!-- Optional JavaScript -->
-    <!-- Tableau -->
-    <!-- <script src="https://mental-health-ucb.herokuapp.com/javascripts/api/tableau-2.min.js"></script> -->
+    
     <!-- Static JS -->
     <!-- <script src="{{url_for('static', filename='js/hillary.js')}}"></script> -->
     <script src="../static/js/hillary.js"></script>

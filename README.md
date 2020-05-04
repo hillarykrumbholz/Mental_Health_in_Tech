@@ -42,12 +42,12 @@ CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1433 ob
 <strong> Label: </strong>Have you been diagnosed with a mental health condition by a medical professional? <br>
 
 ### Technology
-<strong>Software:</strong> Jupyter Notebook, Python 3.7.6<br>
-<strong>Python libraries:</strong> Pandas, Numpy, Scipy, Scikit-learn, SQLAlchemy, Pickle, Node.js
+<strong>Software:</strong> Jupyter Notebook, Python 3.7.6, Flask, JavaScript, Heroku, SQLite, HTML, Tableau<br>
+<strong>Libraries:</strong> Pandas, Numpy, Scipy, Scikit-learn, SQLAlchemy, Pickle, sqlite3, Bootstrap4,
 
 ## Project Description
 
-#### Data Cleaning
+#### Data Cleaning and Exploration
 The initial step is to clean the data by removing null values. 
 - Our data was downloaded from Kaggle.com as a csv file. 
 - Pandas was used to loop through the data set and functions were printed to look at each column and its response percentage. Any columns with less than a 70% response were dropped from data set, leaving us with 48 features. 
@@ -61,6 +61,8 @@ We used pandas and SQLAlchemy to put the csv files that we started with, and mer
 - Reading and writing operations are fast for SQLite databases.
 - SQLite is very easy to learn, additionally there is no added installation and configuration.
 - It is availible through a wide variety of tools.
+
+#### Limitations
 - The main limitation is that that the Database size is limited to 2 GB, which was not an issue for us.
 
 
@@ -75,7 +77,10 @@ Random forest models are classifier algorithms that evolve from many individual 
 #### Why this model?
 The random forest model generally has a high accuracy compared to other models and was chosen for the many additional features that it offers. It is robust against overfitting as all the weak learners are trained on different pieces of the data. They are also robust to outliers because each decision tree isolates atypical observations into small leaves and averages them, meaning that extreme values do not affect the entire model. Additionally, random forests run efficiently on large datasets and can handle thousands of input variables without variable deletion. Considering that our original dataset consisted of 63 survey questions (columns) from 1433 participants (rows), it was important to use a model that could make an accurate prediction with so many variables at play. Another benefit of using random forest is that it can be used to rank the importance of input variables in a natural way, allowing us a better understanding of what survey questions are most important when predicting if an individual has a mental health disorder. <br>
 
-There are limitations when working with a random forest model
+#### Limitations
+- Random forest models are more difficult to interpret when compared to individual decsion trees.
+- Training a large number of deep trees can have high computational costs and use alot of memory.
+- You reach apoint of diminishing returns once a certain number of samples is used.
 
 #### Preprocessing the Data
 OneHotEncoder
@@ -87,7 +92,8 @@ Fit and Transform
 Get_Feature_Names
 - In order to run our model solely on binary data, we used get_feature_names() method so that the new encoded dataframe could be more easily interpreted and then merged the OneHotEncoded features.<br> 
 
-Define target and features
+Define target and features<br/>
+We choose the survey question that most clearly addressed our central question, which was do people in working in Tech have diagnosed mental health disorders?
 - Target: Have you been diagnosed with a mental health disorder - Yes
 - Features: Have you been diagnosed with a mental health disorder - No; Have you been diagnosed with a mental health disorder - Yes <br>
 
@@ -112,12 +118,20 @@ Although for this question, it is also important to look at the precision, which
 Bootstrapping is a test that relies on random sampling with replacement and in random forests is used on the individual trees where some samples are used multiple times. The idea being that if each tree is trained on different samples, the entire forest will have a lower variance without increasing the bias. <br>
  
 ## Dashboard
+Our Dashboard can be found [here.](https://mental-health-ucb.herokuapp.com/#)<br/>
+We are using Heroku, a cloud service to build and run the web page that is displaying our dashboard.
+#### Tools and Process
+- Built a Flask app
 
-#### Tools
-- Tableau
-    - Use of different types of graphs (bar, pie, line) whatever best depicts what point is being made.
-    - Map with added layers
+- Connected our Flask app to Heroku
 
-- Interactive Elements
-    - A map that shows states/countries where people in tech work and what mental health disorders are associated
-    - An interactive mock survey where users can input certain variables to see that has the greatest effect on one's mental health
+- Created the framework for our webpage using HTML with Bootstrap4 and Javascript
+
+- Tableau and Interactive Elements
+    - Use of different types of graphs (bar, pie, line) to best depict our initial analysis.
+    - Created Tableau Dashboard for our landing page.
+    - Map with added layers and filters.
+    - Embeded all Tableau figures into our webpage using Tableau API. 
+
+- Confusion Matrix from the Random Forest Model
+

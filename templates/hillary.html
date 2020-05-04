@@ -79,7 +79,7 @@
                     type='text/javascript'>                    var divElement = document.getElementById('viz1588473440028'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
             </div>
         </div>
-        <div class="card" style="margin-top: 10px;">
+        <div class="card d-none" style="margin-top: 10px;">
             <div class="card-body vis">Types of Mental Health Disorders</div>
             <div class='tableauPlaceholder' id='viz1588530456431' style='position: relative'><noscript><a href='#'><img
                             alt=' '
@@ -121,37 +121,10 @@
                 src="https://raw.githubusercontent.com/RudyR32/Confusion_Matrix_Mental_Health_in_Tech/master/Confusion_matrix.jpg"
                 alt="Card image cap">
             <div class="card-body d-none vis">Confusion Matrix</div>
-            <div class="col-sm-12">
-                <div class="well">
-                  <h4>Summary</h4>
-                    <p>Our model’s accuracy score is 86.11, meaning that it accurately predicts if an individual has a mental health disorder 86.11% of the time, based off how they answer survey questions (assuming they answer honestly). Since this model is not making a prediction that has high consequences, it is merely for the interest of an individual working in tech and wanting to know their likelihood of having (or developing) a mental health disorder, or for the interest of a tech company and wanting to know if offering certain mental health services would be of benefit to their employees, an accuracy of 86.11% is sufficient.
-
-                    Although for this question, it is also important to look at the precision, which is the measure of how reliable a positive classification is. The precision for classifying a true positive and true negative is 90% and 83%, respectively. This means that if a survey participant is predicted to have a mental health disorder based off their answers to questions (true positive), it is 90% likely that it is true. Likewise, if a participant is predicted to not have a mental health disorder (true negative), it is 83% likely that it is true.
-                    </p>
-                </div>
-              </div>
+        </div>
         <div class="card d-none" style="margin-top: 10px;">
             <div class="card-body vis">Summary of Data</div>
-            <div class='tableauPlaceholder' id='viz1588548951565' style='position: relative'><noscript><a href='#'><img
-                            alt=' '
-                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;MH&#47;MHDAge&#47;Dashboard4&#47;1_rss.png'
-                            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                    <param name='embed_code_version' value='3' />
-                    <param name='site_root' value='' />
-                    <param name='name' value='MHDAge&#47;Dashboard4' />
-                    <param name='tabs' value='no' />
-                    <param name='toolbar' value='yes' />
-                    <param name='static_image'
-                        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;MH&#47;MHDAge&#47;Dashboard4&#47;1.png' />
-                    <param name='animate_transition' value='yes' />
-                    <param name='display_static_image' value='yes' />
-                    <param name='display_spinner' value='yes' />
-                    <param name='display_overlay' value='yes' />
-                    <param name='display_count' value='yes' />
-                    <param name='filter' value='publish=yes' /></object></div>
-            <script
-                type='text/javascript'>                    var divElement = document.getElementById('viz1588548951565'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            <div class='tableauPlaceholder' id='viz1588563184692' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;MH&#47;MHDParticipantinfo&#47;MHDdemographicinfo&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MHDParticipantinfo&#47;MHDdemographicinfo' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;MH&#47;MHDParticipantinfo&#47;MHDdemographicinfo&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1588563184692');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1427px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </div>
     </div>
 

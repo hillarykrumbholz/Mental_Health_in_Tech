@@ -12,4 +12,4 @@ Get team member to approve pull request
 git checkout master
 git pull origin master
 git checkout <branch>
-git merge master
+git merge master          

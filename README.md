@@ -1,7 +1,7 @@
 # Final Project - Mental Health in the Tech Workplace
 
 
-![Mental Health in Tech](https://github.com/hillarykrumbholz/Final_Project/blob/master/Presentation_GIFs/Webp.net-gifmaker.gif)
+![Mental Health in Tech](https://github.com/hillarykrumbholz/Final_Project/blob/master/Segment_Four/UCBDAFinalProjectPresentationSlides.gif)
 
 Link to presentation can be found [Here](https://docs.google.com/presentation/d/e/2PACX-1vQ9e59BSZeiK2LWKrIjWPhR_mGaKAb4BfJNviVGeLLih-dGfGRYO86zevzhnSuK90FRGu8NI8DQ-XHF/pub?start=false&loop=false&delayms=3000)
 
@@ -118,6 +118,7 @@ Although for this question, it is also important to look at the precision, which
 Bootstrapping is a test that relies on random sampling with replacement and in random forests is used on the individual trees where some samples are used multiple times. The idea being that if each tree is trained on different samples, the entire forest will have a lower variance without increasing the bias. <br>
  
 ## Dashboard
+![DashboardSummaryData](https://github.com/RudyR32/Confusion_Matrix_Mental_Health_in_Tech/blob/master/MHD%20demographic%20info.png)
 Our Dashboard can be found [here.](https://mental-health-ucb.herokuapp.com/#)<br/>
 We are using Heroku, a cloud service to build and run the web page that is displaying our dashboard.
 #### Tools and Process

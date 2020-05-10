@@ -36,7 +36,7 @@ CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1433 ob
 
 ### Technology
 <strong>Software:</strong> Jupyter Notebook, Python 3.7.6, Flask, JavaScript, Heroku, SQLite, HTML, Tableau<br>
-<strong>Libraries:</strong> Pandas, Numpy, Scipy, Scikit-learn, SQLAlchemy, Pickle, sqlite3, Bootstrap4<br>
+<strong>Libraries:</strong> Pandas, Numpy, Scipy, Scikit-learn, SQLAlchemy, Pickle, sqlite3, Bootstrap4<br >
 
 ## Project Description
 

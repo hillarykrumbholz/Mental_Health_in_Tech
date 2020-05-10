@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Set up app routes
 @app.route("/")
 def index():
-    return render_template("hillary.html")
+    return render_template("index.html")
     #return "Hello flask"
 
 @app.route('/api/v1.0/data', methods=['GET'])

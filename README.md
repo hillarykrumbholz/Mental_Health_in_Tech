@@ -6,20 +6,6 @@
 Link to presentation can be found [Here](https://docs.google.com/presentation/d/e/2PACX-1vQ9e59BSZeiK2LWKrIjWPhR_mGaKAb4BfJNviVGeLLih-dGfGRYO86zevzhnSuK90FRGu8NI8DQ-XHF/pub?start=false&loop=false&delayms=3000)
 
 
-## Segment 3 Expectations: <br>
-By the end of this deliverable the analysis will be complete in addition to any refinements made to the random forest model and SQLite database. Images depicting the data exploration process and results from the analysis will be integrated into the Google slide presentation. Repository should be cleared of excess/unnecessary files and all pull requests should be either merged or deleted. <br>
-
-The larger responsibility of creating the dashboard with interactive elements and perfecting the presentation on Google slides will be shared between all group members. <br>
-
-## Team
-
-<strong>Square: </strong> Complete peer reviews on the code. Primary: Hillary<br>
-<strong>Circle: </strong> Create a dashboard to display findings. Primary: Rudy<br>
-<strong>Triangle: </strong> Create a draft presentation to share with the class. Primary: Jason<br>
-
-All team members will spread the responsibility of working on the dashboard and preparing for the presentation. 
-
-
 ## Project Overview
 
 <strong> Slected Topic: </strong> Presence of Mental Health Disorders in  Tech Workforce <br>
@@ -33,17 +19,24 @@ Careers in tech/IT are becoming more prominent and with many of us moving toward
 2. Does the presence of mental health services offered by a company have an effect on an individual’s mental health?
 3. Do mental health disorders in the  tech workplace vary by age, gender, or country they live and work in? <br><br>
 
-## Resources
-
-<strong> Data Source: </strong>OSMI Mental Health in Tech Survey 2016 <br> 
-CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1433 observations (individuals that participated in  survey) with 63 features (questions that were asked).<br> 
 <strong> Null Hypothesis: </strong> There is no correlation between how participants answer questions to a mental health in tech survey, and their diagnosis of a mental health disorder. <br>
 <strong> Alternative Hypothesis: </strong> Based off how one responds to questions on a survey, you are able to predict if one has a diagnosed mental health disorder. <br> 
 <strong> Label: </strong>Have you been diagnosed with a mental health condition by a medical professional? <br>
 
+## Team
+
+<strong>Square: </strong> Hillary<br>
+<strong>Circle: </strong> Rudy<br>
+<strong>Triangle: </strong> Jason<br>
+
+## Resources
+
+<strong> Data Source: </strong>OSMI Mental Health in Tech Survey 2016 <br> 
+CSV and JSON file from kaggle. It is a survey dataset from 2016 that has 1433 observations (individuals that participated in  survey) with 63 features (questions that were asked).<br> 
+
 ### Technology
 <strong>Software:</strong> Jupyter Notebook, Python 3.7.6, Flask, JavaScript, Heroku, SQLite, HTML, Tableau<br>
-<strong>Libraries:</strong> Pandas, Numpy, Scipy, Scikit-learn, SQLAlchemy, Pickle, sqlite3, Bootstrap4,
+<strong>Libraries:</strong> Pandas, Numpy, Scipy, Scikit-learn, SQLAlchemy, Pickle, sqlite3, Bootstrap4<br>
 
 ## Project Description
 

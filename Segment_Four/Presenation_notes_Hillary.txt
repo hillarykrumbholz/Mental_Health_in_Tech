@@ -1,0 +1,53 @@
+Presentation Notes for Hillary Krumbholz
+
+Slide 6: Preprocessing
+
+PULLED DATA FROM DB
+Once we had our cleaned data, it was put into a SQLite db. We were then able to pull that table for our preprocessing. Since all variables were categorical, we used OneHotEncoder to split each  column or question, into multiple columns that are specific to the question and respective response. The data table was then populated with binary data, 1’s and 0’s. 
+
+GET FEATURE NAMES
+We then used the get feature names method so that our newly encoded dataframe could be more easily interpreted. 
+
+SENT TO DB
+We then sent our encoded data table to our SQLite database, so that if anyone wanted to run this model again, they would not have to go through the entire preprocessing stage. 
+
+DEFINE TARGET AND FEATURE
+We choose the survey question that most clearly addressed our central question, which was are we able to predict if individuals working in Tech have diagnosed mental health disorders?
+TARGET: have you been diagnosed? - Yes
+FEATURES: “  “ - Yes and No
+- And this was question number 25 on the cleaned data survey
+
+Slide 7: Machine Learning Model - Random Forest
+
+To answer our question, ‘Can you predict if one has a diagnosed mental health disorder based off how they answered questions in the survey’, we used a RF algorithm as our mlm. 
+
+HOW THEY WORK:
+- composed of many individual decision trees. 
+Each takes random sample from the dataset. Done many times over.
+Creates a forest of simple decision trees that are trained on the same dataset but on a slightly different set of observations
+The forest creates a strong classifier because the final prediction is made by averaging each ind. Tree and choosing the most voted prediction.
+
+WHY WE CHOSE THIS
+Generally have a high accuracy rate 
+Robust against overfitting and outliers, because all trees are trained on diff pieces of data, and any extreme values that may exist are averaged out so they don’t affect the entire model
+Can run efficiently on large datasets where there are many input variables, which was important to us considering the data started with 63 questions and each could be answered a number of ways
+Another advantage is they can rank importance of input variables, so we were able to see what the most important questions were in making the prediction
+
+SPLIT INTO TRAINING AND TESTING SETS
+To train and validate the model, we split the features and target sets into training and testing sets. This helps determine the relationships between each feature in the features training set and the target training set.
+
+USING RandomForestClassifier
+Used parameter random state and n estimators which allowed us to set the number of trees we wanted in our forest, and we chose 128 trees which is the upper end of how many you’d ideally use. Generally, the more trees you have create a stronger and more stable prediction. However this can slow down a model, which leads me into RF limitations. 
+
+Slide 8 - MLM Limitations
+
+- To achieve a more accurate prediction, it requires more trees which means that running the model can be a slower process, can have high computational costs and use a lot of memory.
+- Also, once a certain number of samples are used, you eventually reach a point of diminishing returns.
+- Random forest models are more difficult to interpret when compared to individual decision trees, so that’s something to think about if sharing this model with others.
+
+Slide 9: Confusion Matrix
+
+Our model’s accuracy score is .86, meaning that it accurately predicts if an individual has a mental health disorder 86.11% of the time, based off how they answer survey questions (assuming they answer honestly). Since this model is not making a prediction that has high consequences, it is merely for the interest of an individual working in tech and wanting to know the likelihood of having (or developing) a mental health disorder based off certain factors, or for the interest of a tech company and wanting to know if offering certain mental health services would be of benefit to their employees, an accuracy of 86.11% is sufficient.
+And as I’m sure many of you remember from the course there are other scores that are equally important such as precision. You can see that our true positive and true negative scores are 90% and 83%, respectively. If anyone has any more questions on that we’d be happy to discuss that in the Q and A portion.
+
+With that, I’m going to hand it over to Rudy and he will explain our dashboard.

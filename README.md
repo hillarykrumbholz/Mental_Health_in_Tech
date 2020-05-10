@@ -50,13 +50,13 @@ The initial step is to clean the data by removing null values.
 - Chi-square tests were ran on each column to determine which columns were significant and should be kept. A p-value of 0.05 was used to determine significance, leaving us with 32 columns. 
 
 ## Database Integration
-We used pandas and SQLAlchemy to put the csv files that we started with, and merged tables that we created into a SQLite database. Our database is then able to interact with our machnie learning model, which allows us to make predictions and analyze our results. We choose to use SQLite because it has several characteristics that we were looking for which are listed below:
+We used pandas and SQLAlchemy to load the csv files that we started with, and merged tables that we created into a SQLite database. Our database is then able to interact with our machnie learning model, which allows us to make predictions and analyze our results. We chose to use SQLite because it has several characteristics that we were looking for which are listed below:
 - Reading and writing operations are fast for SQLite databases.
 - SQLite is very easy to learn, additionally there is no added installation and configuration.
 - It is availible through a wide variety of tools.
 
 #### Limitations
-- The main limitation is that that the Database size is limited to 2 GB, which was not an issue for us.
+- The main limitation is that the Database size is limited to 2 GB, which was not an issue for us.
 
 
 ![ERD schema](https://github.com/hillarykrumbholz/Final_Project/blob/master/Segment_Two/Images/ERD_schema.png)

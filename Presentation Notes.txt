@@ -1,0 +1,32 @@
+Presentation Notes
+Note: These are not pretty but they are what I used and I personally get overly neverous if my notes are too comprehensive because I try to recite them verbatim.  Also, these were in word and will probably be formatted poorly as a text file.
+
+We decided to create a web application to display our Dashboard. To build the structure of our webpage we used HTML specifically using the Bootstrap 4 framework as well as Javascript.  To Develop our web application we used Flask which I am sure you are familiar with from class.  If not Flask is a micro web framework written in Python.
+
+To deploy our webpage we used Heroku.  Heroku is a container-based cloud Platform that is used to deploy, manage, and scale apps.
+We initially had the layout of one page with multiple visualizations decided go to a layout with a landing page with a drop down where there user can select the visualization that they would like to see.
+
+Webpage first landing page
+We decided to use Tableau to create our visualizations because of our familiarity with it and the ease of use with our dataset.  Most you are probably familiar with Tableau but if you are not you can think of it as a Tool similar to a pivot table for creating visualizations that has the ability to connect to multiple types of data sources.  To embed our Tableau visualizations we used the Tableau API.
+Summary of Data
+Tree
+Questions
+* Did you feel that your previous employers took mental health as seriously as physical health?:* * * Did you hear of or observe negative consequences for co-workers with mental health issues in your previous workplaces?:* * * Avg. What is your age?:* * * Have you ever sought treatment for a mental health issue from a mental health professional?:* * * Number of Records:
+
+Number of Participants
+
+
+Do you work from Home
+I Have to imagine that these results would change if the survey was done today
+* * Questions tab
+Links to Database and displays the questions that were used to in our random forest model.
+Confusion Matrix 
+The confusion matrix for that random forest model can be seen Can be seen here w
+Map 
+You got this
+
+If you want know more our link is here
+Questions
+
+
+
